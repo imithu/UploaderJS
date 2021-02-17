@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>UploaderJS</title>
+    <link rel='stylesheet' href='assets/bootstrap_v5_beta2/css/bootstrap.css'>
+</head>
+<body class='mt-5'>
+    
+    
+    
+    
+
+
+<section class='container mt-5'>
+    <div class="row">
+        <div class="col-lg-6">
+            <!-- upload zone -->
+            <div class="mb-5 border-primary" id="UploaderJS_upload_zone" style="border: 4px dashed;">
+            <div class="h3 text-center mt-5">Drop the files here</div>
+                <div class="container mb-5">
+                    <div class="btn btn-outline-primary w-100" onclick='document.querySelector("#UploaderJS_input_click").click();' >Open the file Explorer</div>
+                    <input type="file" name="" id="UploaderJS_input_click" hidden>
+                </div>
+            </div>
+            <!-- ./upload zone -->
+        </div>
+        <div class="col-lg-6">
+            <!-- progress zone -->
+            <div class="card">
+                <div class="card-header">File List</div>
+                <div class="card-body overflow-auto" style="max-height: 30vh;">
+                    <div id="UploaderJS_progress_zone"></div>        
+                </div>
+            </div>
+            <!-- ./progress zone -->
+        </div>
+    </div>
+</section>
+
+
+
+
+<script src='src/uploader.js'></script>
+<script>
+    new UploaderJS({
+        selector_input: '#UploaderJS_input_click',
+        selector_drop: '#UploaderJS_upload_zone',
+        url: 'upload.*',
+        form_data: {
+            name: 'UploaderJS',
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+<script src='assets/bootstrap_v5_beta2/js/bootstrap.bundle.js'></script>
+</body>
+</html>
