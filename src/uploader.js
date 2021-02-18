@@ -1,3 +1,7 @@
+/**
+ * UploaderJS v1.0.1 (https://github.com/imithu/UploaderJS)
+ * Licensed under MIT (https://github.com/imithu/UploaderJS/blob/master/LICENSE)
+ */
 'use strict';
 
 
@@ -61,7 +65,7 @@ class UploaderJS{
      * @param object config
      * 
      * @since   1.0.0
-     * @version 1.0.0
+     * @version 1.1.0
      * @author  Mahmudul Hasan Mithu
      */
     constructor( config ){
@@ -87,8 +91,8 @@ class UploaderJS{
             let files = e.dataTransfer.files;
         
             for(let file=0;file<files.length;file++){
-                this.create_file_progress(files[file]);
-                this.upload_file(files[file]);
+                UploaderJS.create_file_progress(files[file]);
+                UploaderJS.upload_file(files[file]);
             }
         }
     }
